@@ -4,6 +4,7 @@ const server = jsonServer.create();
 const router = jsonServer.router("./db.json");
 
 // Make sure to use the default middleware
+const middlewares = jsonServer.defaults();
 
 server.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*'); // Allow any origin
@@ -12,6 +13,7 @@ server.use((req, res, next) => {
   next();
 });
 
+server.use(middlewares);
 // Add this before server.use(router)
 server.use(
     // Add custom route here if needed
