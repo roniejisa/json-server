@@ -12,9 +12,9 @@
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
-
-  "dependencies": {
-    "json-server": "^0.17.4",
-    "nodemon": "^3.1.0"
-  }
+	"dependencies": {
+		"@now/node": "^1.8.5",
+		"json-server": "^0.17.4",
+		"nodemon": "^3.1.0"
+	}
 }
