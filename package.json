@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"engines": {
-		"node": "18.x"
+		"node": "20.x"
 	},
 	"scripts": {
 		"start": "node index.js",
@@ -15,6 +15,7 @@
 	"license": "ISC",
 	"dependencies": {
 		"@now/node": "^1.8.5",
+		"@vercel/node": "^3.0.26",
 		"json-server": "^0.17.4"
 	},
 	"devDependencies": {
