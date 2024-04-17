@@ -7,8 +7,7 @@ const db = JSON.parse(fs.readFileSync(path.join(__dirname, 'db.json')))
 
 const router = jsonServer.router(db);
 
-// Make sure to use the default middleware
-const middlewares = jsonServer.defaults();
+
 
 server.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*'); // Allow any origin
@@ -17,9 +16,14 @@ server.use((req, res, next) => {
     next();
 });
 
-server.use(middlewares);
 // Add this before server.use(router)
+server.get('/favicon.ico', (req, res) => {
+    res.sendFile(__dirname + '/favicon.ico');
+})
+
 server.use(router);
+
+
 server.listen(3000, () => {
     console.log("JSON");
 });
