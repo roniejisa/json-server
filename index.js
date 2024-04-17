@@ -19,12 +19,6 @@ server.use((req, res, next) => {
 
 server.use(middlewares);
 // Add this before server.use(router)
-server.use(
-    // Add custom route here if needed
-    jsonServer.rewriter({
-        "/*": "/$1",
-    })
-);
 server.use(router);
 server.listen(3000, () => {
     console.log("JSON");
